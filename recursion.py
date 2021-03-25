@@ -9,9 +9,9 @@ def sum_func(n):
     if n == 0: 
         return 0
     else:
-        digits = n % 10
+        last_digits = n % 10
         n = n//10
-        return digits + sum_func(n)
+        return last_digits+ sum_func(n)
 
 def word_split(S,arr, output = None):
     if output is None:

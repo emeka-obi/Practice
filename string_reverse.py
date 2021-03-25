@@ -3,9 +3,9 @@
 
 def string_reverse(s):
 
-    for i in range(len(s)//2):
-        last = len(s) - i - 1
-        s[last], s[i] = s[i], s[last]
+    for num in range(len(s)//2):
+        last = len(s) - num - 1
+        s[last], s[num] = s[num], s[last]
 
     return s
 
