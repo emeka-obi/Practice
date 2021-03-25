@@ -6,7 +6,7 @@ def rec_sum(n):
         return n + rec_sum(n-1)
 
 def sum_func(n):
-    if n == 0:
+    if n == 0: 
         return 0
     else:
         digits = n % 10
