@@ -35,9 +35,5 @@ s = Square(5,6)
 print(s.getArea())
 
 
-import math
+import random
 
-from math import sin
-
-
-print(sin(50))
