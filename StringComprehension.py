@@ -9,7 +9,7 @@ def stringComprehension(S):
     for j in count:
         my_list.append(j)
         my_list.append(str(count[j]))
-    return "".join(my_list)
+    return " ".join(my_list)
 
 
 print(stringComprehension("AAAAAaaaBBBBCCCDDEEE"))

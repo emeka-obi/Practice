@@ -1,15 +1,18 @@
 """Much less efficient on large lists such as heap sort, insertion sort and merge sort"""
 
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
 
-        currentvalue = arr[i]
-        position = i
+def insertion_sort(A):
+    for k in range(1, len(A)):
+        cur = A[k]
+        j = k
+        while j >0 and A[j-1] > cur:
+            A[j] = A[j-1]
+            j -= 1
+            A[j] = cur
 
-        while position > 0 and arr[position-i] > currentvalue:
-            arr[position] = arr[position-1]
+        print(A)
 
-            position = position -1
-        
-        arr[position] = currentvalue
 
+
+
+print(insertion_sort([6,8,2,3,9,4,7,1]))

@@ -1,3 +1,11 @@
+
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_path = os.path.join(BASE_DIR, "db")
+
+db_name = "sqlite:///" + db_path + "/init.db"
+print(db_name)
+
 def  balanced(s):
 
     if len(s) % 2 != 0:
@@ -21,4 +29,4 @@ def  balanced(s):
 
 
 if __name__ == "__main__":
-    print(balanced('{}(){]'))
+    print(balanced('{}()'))

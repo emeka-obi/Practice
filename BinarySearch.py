@@ -5,6 +5,7 @@ def binary_search(arr,ele):
     
     while first <= last and found != True:
         mid = (first + last)//2
+        print(mid)
 
         if arr[mid] == ele:
             found = True
@@ -38,4 +39,4 @@ def binary_search(arr,ele):
 #                     return recursive_binary_search(arr[mid+1],ele)
 
 if __name__ == "__main__":
-    print(binary_search([1,2,3,4,5,6,7,8,9,10],6))
+    print(binary_search([2,4,7,8,9,12,14,17,19,22,25,27,28,33,37],4))

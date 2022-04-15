@@ -1,0 +1,53 @@
+
+from positional_list import PositionalList
+from array_stack import ArrayStack
+
+L = PositionalList()
+S = ArrayStack()
+
+p = L.add_last(0)
+q = L.add_after(p,3)
+r = L.add_after(q,6)
+s =  L.add_after(r,9)
+t =  L.add_after(s,12)
+u =  L.add_after(t,15)
+v =  L.add_after(u,18)
+w =  L.add_after(v,21)
+x =  L.add_after(w,24)
+y =  L.add_after(x,27)
+
+
+for i in range(28, 3, -4):
+    S.push(i)
+
+def insertPosition(L,S):
+ 
+
+    cursor = L.first()
+    res = L.first()
+    while S.__len__() > 0 and cursor != None:
+        if L.after(cursor) == None:
+             L.add_after(cursor, S.pop())
+        elif cursor.element() <= S.top() and S.top() <= L.after(cursor).element() and L.after(cursor).element != None:
+            L.add_after(cursor, S.pop())   
+        else:
+            cursor = L.after(cursor)
+
+    # to check output of the position list
+    while res != None:
+        print(res.element())
+        res =L.after(res)
+
+    #the output of the code is 0,3,4,6,8,9,12,12,15,16,18,20,21,24,24,27,28
+    #Run time is O(Position List)
+     
+
+ 
+
+
+
+if __name__ == "__main__":
+    insertPosition(L,S)
+
+
+
